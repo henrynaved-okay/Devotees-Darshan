@@ -1,3 +1,15 @@
+// Fade-in Sections
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.3 };
+const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add('appear');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
 // AI Crowd Prediction
 function updatePrediction() {
   const result = document.getElementById("predictionResult");
@@ -28,23 +40,23 @@ document.getElementById("sosButton").addEventListener("click", function() {
   alert("📞 Calling Staff Council: +91 9876543210");
 });
 
-// AI Chatbox Simulation
-function askAI() {
+// AI Chatbox
+document.getElementById("askAIButton").addEventListener("click", function() {
   const input = document.getElementById("chatInput").value.toLowerCase();
   const responseBox = document.getElementById("chatResponse");
   if(input.includes("crowd") || input.includes("slot")) {
     const slots = ["6AM-8AM","9AM-11AM","12PM-2PM","3PM-5PM","6PM-8PM"];
     const safeSlot = slots[Math.floor(Math.random()*slots.length)];
-    responseBox.innerHTML = "AI Suggestion: Consider visiting at <strong>" + safeSlot + "</strong> to avoid crowd.";
+    responseBox.innerHTML = "AI Suggestion: Visit at <strong>" + safeSlot + "</strong> to avoid crowd.";
   } else if(input.includes("safe") || input.includes("emergency")) {
-    responseBox.innerHTML = "AI Tip: Always follow staff instructions and use SOS button if needed.";
+    responseBox.innerHTML = "AI Tip: Follow staff instructions and use SOS button if needed.";
   } else {
     responseBox.innerHTML = "AI: Sorry, I can only provide guidance on crowd levels and safety.";
   }
-}
+});
 
-// Time Slot Booking Simulation
-function bookSlot() {
+// Time Slot Booking
+document.getElementById("bookSlotButton").addEventListener("click", function() {
   const slot = document.getElementById("slotSelect").value;
   alert("✅ Slot " + slot + " booked successfully! Please reach on time.");
-}
+});

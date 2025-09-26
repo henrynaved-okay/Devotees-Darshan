@@ -14,31 +14,55 @@
   <p>Temple & Pilgrimage Crowd Management System</p>
 </header>
 
-<section>
+<section class="fade-in team-section">
   <h2>Our Team</h2>
-  <p><strong>Leader:</strong> Kaustubh Arora</p>
-  <ul>
-    <li>Tanmay</li>
-    <li>Aditi Sharma</li>
-    <li>Navneet Kumar</li>
-    <li>Yashasvi Baranwal</li>
-    <li>Naved</li>
-  </ul>
+  <div class="team-cards">
+    <div class="card">
+      <img src="kaustubh.jpg" alt="Kaustubh Arora" class="team-img">
+      <h3>Kaustubh Arora</h3>
+      <p>Leader</p>
+    </div>
+    <div class="card">
+      <img src="tanmay.jpg" alt="Tanmay" class="team-img">
+      <h3>Tanmay</h3>
+      <p>Member</p>
+    </div>
+    <div class="card">
+      <img src="aditi.jpg" alt="Aditi Sharma" class="team-img">
+      <h3>Aditi Sharma</h3>
+      <p>Member</p>
+    </div>
+    <div class="card">
+      <img src="navneet.jpg" alt="Navneet" class="team-img">
+      <h3>Navneet</h3>
+      <p>Member</p>
+    </div>
+    <div class="card">
+      <img src="yashasvi.jpg" alt="Yashasvi Baranwal" class="team-img">
+      <h3>Yashasvi Baranwal</h3>
+      <p>Member</p>
+    </div>
+    <div class="card">
+      <img src="naved.jpg" alt="Naved" class="team-img">
+      <h3>Naved</h3>
+      <p>Member</p>
+    </div>
+  </div>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>AI Crowd Prediction</h2>
-  <p>Based on data, system suggests less crowded slots for darshan.</p>
+  <p>System suggests less crowded slots for darshan.</p>
   <div id="predictionResult">Checking...</div>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>Live Crowd Counter</h2>
   <p>Real-time devotees count inside temple (simulated).</p>
   <div id="counterBox" class="counter">Loading...</div>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>Nearby Facilities Map</h2>
   <p>See Somnath temple location & nearby facilities.</p>
   <iframe 
@@ -47,21 +71,21 @@
   </iframe>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>Emergency Help</h2>
   <p>If you face an emergency, click below to contact staff council immediately.</p>
   <button id="sosButton">📞 Call SOS</button>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>AI Chatbox / Guidance</h2>
   <p>Ask the system for suggestions on less crowded slots or safety tips:</p>
   <input type="text" id="chatInput" placeholder="Type a question...">
-  <button onclick="askAI()">Ask</button>
+  <button id="askAIButton">Ask</button>
   <div id="chatResponse">Awaiting your question...</div>
 </section>
 
-<section>
+<section class="fade-in">
   <h2>Book Your Time Slot</h2>
   <p>Select a slot to book your offline darshan (simulated):</p>
   <select id="slotSelect">
@@ -71,7 +95,7 @@
     <option value="3PM-5PM">3PM-5PM</option>
     <option value="6PM-8PM">6PM-8PM</option>
   </select>
-  <button onclick="bookSlot()">Book Slot</button>
+  <button id="bookSlotButton">Book Slot</button>
 </section>
 
 <footer>
